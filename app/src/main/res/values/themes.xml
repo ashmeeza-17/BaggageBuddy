@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ICT602Assignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimaryDark">@color/darkPrimary</item>
+        <item name="colorPrimary">@color/lightPrimary</item>
+        <item name="colorSecondary">@color/background</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/lightPrimary</item>"
+    </style>
+
+    <style name="ThemeOverlay.AppCompat.PopupMenu" parent="ThemeOverlay.Material3">
+        <item name="android:textColor">@color/darkPrimary</item>
+    </style>
+
+    <style name="Theme.ICT602Assignment" parent="Base.Theme.ICT602Assignment" />
+</resources>

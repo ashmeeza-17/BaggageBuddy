@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d0cb"
+    tools:context="about">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#908b6f"
+            app:title="BaggageBuddy"
+            app:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.046" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:background="@color/white"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSub2"
+                android:text="Application detail:"
+                android:textSize="18dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/tvInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSub2"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="26dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:padding="10dp"
+                android:text="This application will calculate the weight of the passangers' baggages.\nThe users are required to enter the weight of baggage, choose the type of ticket class; either Business class or Economy class and lastly the excess baggage rate.\nOnce user clicked calculate button, it will display the excess baggage weight, charge and total amount payable."
+                android:textColor="@color/darkPrimary"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSub1"
+                android:text="Developers detail:"
+                android:textSize="18dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvName"
+                android:layout_below="@+id/tvSub1"
+                android:layout_marginLeft="10dp"
+                android:text="NAME:\n\t\t\t\tNur Ashmeeza Binti Abdul Latif"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvID"
+                android:layout_below="@+id/tvName"
+                android:layout_marginLeft="10dp"
+                android:text="STUDENT ID:\n\t\t\t\t2025112845"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGroup"
+                android:layout_below="@+id/tvName"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:text="GROUP:\n\t\t\t\tRCDCS2515A"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGithub"
+                android:layout_below="@+id/tvID"
+                android:layout_marginLeft="10dp"
+                android:text="GITHUB:\n\t\thttps://github.com/ashmeeza-17/BaggageBuddy"
+                android:autoLink="web"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

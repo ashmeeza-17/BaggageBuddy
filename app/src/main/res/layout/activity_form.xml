@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d0cb"
+    tools:context=".form">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#908b6f"
+            app:title="BaggageBuddy"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.PopupMenu"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:text="Form"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.046" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_margin="5dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:text="Weight of Baggage"
+                android:textColor="@color/darkPrimary"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWeight"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Kilogram (kg)"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@color/darkPrimary"
+                android:textColorLink="@color/darkPrimary" />
+
+            <TextView
+                android:id="@+id/tvClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etWeight"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:text="Ticket Class"
+                android:textColor="@color/darkPrimary"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvClass"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RadioButton
+                    android:id="@+id/rbBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Business Class (40kg free)"
+                    android:textColor="@color/darkPrimary"
+                    android:textSize="16dp"
+                    android:padding="1px"/>
+
+                <RadioButton
+                    android:id="@+id/rbEconomy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Economy Class (20kg free)"
+                    android:textColor="@color/darkPrimary"
+                    android:textSize="16dp"
+                    android:padding="1px"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvExcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:text="Excess Baggage Rate per kilogram"
+                android:textColor="@color/darkPrimary"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etExcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvExcess"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="15dp"
+                android:hint="Ringgit (RM)"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textColor="@color/darkPrimary"
+                android:textColorLink="@color/darkPrimary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvResult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="10dp"
+                android:text="Result:"
+                android:textColor="@color/darkPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvResult2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvResult1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/darkPrimary"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/lightPrimary"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.096" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
