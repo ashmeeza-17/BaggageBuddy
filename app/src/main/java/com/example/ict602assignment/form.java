@@ -74,7 +74,7 @@ public class form extends AppCompatActivity {
                         charge = baggage * dExcess;
                         total = charge + (charge * 0.08);
 
-                        tvResult2.setText("The excess baggage weight: " + dWeight + " kg.\nThe excess baggage charge: RM " + dExcess + "\nThe total amount payable: RM " + total);
+                        tvResult2.setText("The excess baggage weight: " + baggage + " kg.\nThe excess baggage charge: RM " + charge + "\nThe total amount payable: RM " + total);
                     }
                 }
         );
