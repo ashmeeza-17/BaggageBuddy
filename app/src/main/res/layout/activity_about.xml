@@ -54,7 +54,65 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="205dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSub1"
+                android:text="Developers detail:"
+                android:textSize="18dp"
+                android:layout_margin="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvName"
+                android:layout_below="@+id/tvSub1"
+                android:layout_marginLeft="10dp"
+                android:text="NAME:\n\t\t\t\t\t\t\tNur Ashmeeza Binti Abdul Latif"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvID"
+                android:layout_below="@+id/tvName"
+                android:layout_marginLeft="10dp"
+                android:text="STUDENT ID:\n\t\t\t\t\t\t\t2025112845"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGroup"
+                android:layout_below="@+id/tvID"
+                android:layout_marginLeft="10dp"
+                android:text="GROUP:\n\t\t\t\t\t\t\tRCDCS2515A"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGithub"
+                android:layout_below="@+id/tvGroup"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="GITHUB:\n\t\thttps://github.com/ashmeeza-17/BaggageBuddy"
+                android:autoLink="web"
+                android:textColor="@color/darkPrimary"
+                android:fontFamily="sans-serif-condensed"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_margin="10dp">
 
@@ -75,70 +133,23 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="26dp"
                 android:layout_marginEnd="26dp"
-                android:fontFamily="sans-serif-condensed-light"
+                android:fontFamily="sans-serif-condensed"
                 android:padding="10dp"
                 android:text="This application will calculate the weight of the passangers' baggages.\nThe users are required to enter the weight of baggage, choose the type of ticket class; either Business class or Economy class and lastly the excess baggage rate.\nOnce user clicked calculate button, it will display the excess baggage weight, charge and total amount payable."
                 android:textColor="@color/darkPrimary"
                 android:textSize="14dp"/>
+
         </RelativeLayout>
 
-        <RelativeLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:background="@color/white"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvSub1"
-                android:text="Developers detail:"
-                android:textSize="18dp"
-                android:layout_margin="5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvName"
-                android:layout_below="@+id/tvSub1"
-                android:layout_marginLeft="10dp"
-                android:text="NAME:\n\t\t\t\tNur Ashmeeza Binti Abdul Latif"
-                android:textColor="@color/darkPrimary"
-                android:fontFamily="sans-serif-condensed"/>
-
-            <TextView
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvID"
-                android:layout_below="@+id/tvName"
-                android:layout_marginLeft="10dp"
-                android:text="STUDENT ID:\n\t\t\t\t2025112845"
-                android:textColor="@color/darkPrimary"
-                android:fontFamily="sans-serif-condensed"/>
-
-            <TextView
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvGroup"
-                android:layout_below="@+id/tvName"
-                android:layout_alignParentRight="true"
-                android:layout_marginLeft="10dp"
-                android:text="GROUP:\n\t\t\t\tRCDCS2515A"
-                android:textColor="@color/darkPrimary"
-                android:fontFamily="sans-serif-condensed"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvGithub"
-                android:layout_below="@+id/tvID"
-                android:layout_marginLeft="10dp"
-                android:text="GITHUB:\n\t\thttps://github.com/ashmeeza-17/BaggageBuddy"
-                android:autoLink="web"
-                android:textColor="@color/darkPrimary"
-                android:fontFamily="sans-serif-condensed"/>
-
-        </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/copyright"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
 
     </LinearLayout>
 
